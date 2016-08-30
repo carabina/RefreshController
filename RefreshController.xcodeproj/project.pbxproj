@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85E00B2E1D75A9C70066EBDC /* RefreshController.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E00B2D1D75A9C70066EBDC /* RefreshController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85E00B3D1D75AA640066EBDC /* PullToRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E00B3A1D75AA640066EBDC /* PullToRefreshController.swift */; };
+		85E00B3E1D75AA640066EBDC /* RefreshIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E00B3B1D75AA640066EBDC /* RefreshIndicator.swift */; };
+		85E00B3F1D75AA640066EBDC /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E00B3C1D75AA640066EBDC /* RefreshView.swift */; };
+		85E00B4F1D75AAD10066EBDC /* RefreshController.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E00B371D75A9F10066EBDC /* RefreshController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85E00B2A1D75A9C70066EBDC /* RefreshController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RefreshController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85E00B2D1D75A9C70066EBDC /* RefreshController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshController.h; sourceTree = "<group>"; };
-		85E00B2F1D75A9C70066EBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E00B361D75A9F10066EBDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E00B371D75A9F10066EBDC /* RefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshController.h; sourceTree = "<group>"; };
+		85E00B3A1D75AA640066EBDC /* PullToRefreshController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshController.swift; sourceTree = "<group>"; };
+		85E00B3B1D75AA640066EBDC /* RefreshIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshIndicator.swift; sourceTree = "<group>"; };
+		85E00B3C1D75AA640066EBDC /* RefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
+		85E00B411D75AA830066EBDC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85E00B421D75AA830066EBDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E00B441D75AA830066EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85E00B461D75AA830066EBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85E00B471D75AA830066EBDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E00B481D75AA830066EBDC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +42,8 @@
 		85E00B201D75A9C70066EBDC = {
 			isa = PBXGroup;
 			children = (
-				85E00B2C1D75A9C70066EBDC /* RefreshController */,
+				85E00B401D75AA830066EBDC /* Demo */,
+				85E00B351D75A9F10066EBDC /* Source */,
 				85E00B2B1D75A9C70066EBDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +56,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		85E00B2C1D75A9C70066EBDC /* RefreshController */ = {
+		85E00B351D75A9F10066EBDC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				85E00B2D1D75A9C70066EBDC /* RefreshController.h */,
-				85E00B2F1D75A9C70066EBDC /* Info.plist */,
+				85E00B3A1D75AA640066EBDC /* PullToRefreshController.swift */,
+				85E00B3B1D75AA640066EBDC /* RefreshIndicator.swift */,
+				85E00B3C1D75AA640066EBDC /* RefreshView.swift */,
+				85E00B361D75A9F10066EBDC /* Info.plist */,
+				85E00B371D75A9F10066EBDC /* RefreshController.h */,
 			);
-			path = RefreshController;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		85E00B401D75AA830066EBDC /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				85E00B411D75AA830066EBDC /* AppDelegate.swift */,
+				85E00B421D75AA830066EBDC /* Assets.xcassets */,
+				85E00B431D75AA830066EBDC /* LaunchScreen.storyboard */,
+				85E00B451D75AA830066EBDC /* Main.storyboard */,
+				85E00B471D75AA830066EBDC /* Info.plist */,
+				85E00B481D75AA830066EBDC /* ViewController.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +88,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E00B2E1D75A9C70066EBDC /* RefreshController.h in Headers */,
+				85E00B4F1D75AAD10066EBDC /* RefreshController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +133,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 85E00B201D75A9C70066EBDC;
 			productRefGroup = 85E00B2B1D75A9C70066EBDC /* Products */;
@@ -130,10 +160,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E00B3F1D75AA640066EBDC /* RefreshView.swift in Sources */,
+				85E00B3D1D75AA640066EBDC /* PullToRefreshController.swift in Sources */,
+				85E00B3E1D75AA640066EBDC /* RefreshIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85E00B431D75AA830066EBDC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E00B441D75AA830066EBDC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		85E00B451D75AA830066EBDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E00B461D75AA830066EBDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		85E00B301D75A9C70066EBDC /* Debug */ = {
@@ -230,28 +282,33 @@
 		85E00B331D75A9C70066EBDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RefreshController/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Edmond.com.RefreshController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		85E00B341D75A9C70066EBDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RefreshController/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Edmond.com.RefreshController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
