@@ -1,6 +1,6 @@
 //
 //  RefreshView.swift
-//  PullToRefreshController
+//  RefreshController
 //
 //  Created by Edmond on 5/6/2559 BE.
 //  Copyright © 2559 BE Edmond. All rights reserved.
@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 
 let RefreshViewDefaultHeight: CGFloat = 44.0
-let RefreshViewAnimationDuration: NSTimeInterval = 0.3
+let RefreshViewAnimationDuration: TimeInterval = 0.3
 
 
 public protocol RefreshViewProtocol: class {
-    func pullToUpdate(controller: PullToRefreshController, didChangeState state: RefreshState)
-    func pullToUpdate(controller: PullToRefreshController, didChangePercentage percentate: CGFloat)
-    func pullToUpdate(controller: PullToRefreshController, didSetEnable enable: Bool)
+    func pullToUpdate(_ controller: PullToRefreshController, didChangeState state: RefreshState)
+    func pullToUpdate(_ controller: PullToRefreshController, didChangePercentage percentate: CGFloat)
+    func pullToUpdate(_ controller: PullToRefreshController, didSetEnable enable: Bool)
 }
 
 public class RefreshView: UIView {
     var state: RefreshState? {
         willSet {
-            if newValue == .Stop {
+            if newValue == .stop {
                 indicator.stopAnimating()
-            } else if newValue == .Loading {
+            } else if newValue == .loading {
                 indicator.startAnimating()
             }
         }
@@ -41,28 +41,28 @@ public class RefreshView: UIView {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-        let boundsCenter = CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds))
+        let boundsCenter = CGPoint(x: bounds.midX, y: bounds.midY)
         indicator.center = boundsCenter
     }
 
-    private lazy var indicator: RefreshIndicator = {
-        return RefreshIndicator(color: UIColor.lightGrayColor())
+    lazy var indicator: RefreshIndicator = {
+        return RefreshIndicator(color: UIColor.lightGray)
     }()
 }
 
 extension RefreshView: RefreshViewProtocol {
-    public func pullToUpdate(controller: PullToRefreshController, didChangeState state: RefreshState) {
+    public func pullToUpdate(_ controller: PullToRefreshController, didChangeState state: RefreshState) {
         self.state = state
         setNeedsLayout()
     }
 
-    public func pullToUpdate(controller: PullToRefreshController, didChangePercentage percentage: CGFloat) {
+    public func pullToUpdate(_ controller: PullToRefreshController, didChangePercentage percentage: CGFloat) {
         indicator.setPercentage(percentage)
     }
 
-    public func pullToUpdate(controller: PullToRefreshController, didSetEnable enable: Bool) {
+    public func pullToUpdate(_ controller: PullToRefreshController, didSetEnable enable: Bool) {
         if !enable {
-            state = .Stop
+            state = .stop
         }
     }
 }
